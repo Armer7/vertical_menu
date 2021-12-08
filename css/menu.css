@@ -1,0 +1,146 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 1366px;
+  margin: 0 auto;
+  background-color: #f1f1f1;
+  font: 400 20px 'Lato', sans-serif;
+}
+
+.aside {
+  background-color: #293744;
+  width: 314px;
+  height: 1500px;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #bed1e4;
+
+  line-height: 57px;
+  background-color: #33414e;
+  padding-left: 30px;
+}
+
+.nav,
+.sub__nav {
+  list-style-type: none;
+}
+
+.nav li {
+
+}
+
+.nav > li > a {
+  display: block;
+  padding: 21px 0 21px 80px;
+  text-decoration: none;
+  color: #ededec;
+  border-left: 8px solid transparent;
+  background-color: #33414e;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav > li > a::before {
+  text-align: center;
+  width: 25px;
+  height: 22px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 23px;
+  /*noinspection CssNoGenericFontName*/
+  font-family: FontAwesome;
+  font-style: normal;
+  font-variant: normal;
+}
+
+.nav > li > a::after {
+  content: '\f105';
+  width: 8px;
+  height: 14px;
+  line-height: 14px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 23px;
+  /*noinspection CssNoGenericFontName*/
+  font-family: FontAwesome;
+  font-style: normal;
+  font-variant: normal;
+
+  transition: transform 200ms;
+}
+
+.sub__nav {
+}
+
+.sub__nav li {
+  height: 0;
+  overflow: hidden;
+  transition: height 500ms;
+}
+
+.sub__nav a {
+  display: block;
+  padding: 21px 0 21px 115px;
+  text-decoration: none;
+  color: #ededec;
+  background-color: #293744;
+  position: relative;
+  cursor: pointer;
+}
+
+.sub__nav a::before {
+  text-align: center;
+  width: 15px;
+  height: 12px;
+  font-size: 15px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 86px;
+  /*noinspection CssNoGenericFontName*/
+  font-family: FontAwesome;
+  font-style: normal;
+  font-variant: normal;
+}
+
+.icon-green::before {
+  color: #85c875;
+}
+
+.icon-blue::before {
+  color: #0bc4df;
+}
+
+.icon-yellow::before {
+  color: #f1a80a;
+}
+
+
+.nav > li > .active + .sub__nav {
+  display: block;
+}
+
+.nav .active {
+  border-color: #85c875;
+  background-color: #253340;
+}
+
+.nav a.active::after {
+  transform: rotate(90deg);
+}
+
+.nav > li > .active + .sub__nav li {
+  height: 57px;
+}
